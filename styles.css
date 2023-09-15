@@ -1,0 +1,199 @@
+/* Reset some default styles */
+body, h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add general styles for the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-image: url('background.jpg'); /* Add the path to your background image */
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to fill the viewport */
+    overflow-x: hidden; /* Hide horizontal scrollbar if necessary */
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Dark Theme Links */
+.dark-theme a {
+    color: #007bff; /* Change link color to a visible color in dark mode */
+}
+
+/* Dark Theme Hover Effect for Links */
+.dark-theme a:hover {
+    color: #ffc107; /* Change link hover color to a visible color in dark mode */
+}
+
+/* Style the navigation bar */
+.navbar {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background color for the navigation bar */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the menu items */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #007bff;
+}
+
+/* Style the Home section */
+#home {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Style the Home section header (your name) */
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style the Home section subheading (your job title) */
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Style the Home section content */
+#home .content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Style the "Learn More" button in the Home section */
+#home .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#home .cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* ... (previous styles) */
+
+/* Style the About, Projects, and Contact sections */
+.section {
+    padding: 20px;
+    text-align: center;
+    display: none; /* Initially hide all sections */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Style the section header (About, Projects, Contact) */
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style the section content */
+.section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Style the list items in the Projects section */
+#projects ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#projects ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Style the Contact section content */
+#contact ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#contact ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Style the "Back to Top" button in all sections */
+.section .back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.section .back-to-top:hover {
+    background-color: #0056b3;
+}
+
+
+/* Add a container to push footer to the bottom */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Footer styles */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    margin-top: auto; /* Push the footer to the bottom of the container */
+}
+
+
+
