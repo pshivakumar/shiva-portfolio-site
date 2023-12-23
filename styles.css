@@ -1,3 +1,10 @@
+/* Gradient as a variable */
+:root {
+    --background-gradient: linear-gradient(to right,#333, #000);
+    --nav-background-gradient: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.8));
+    --blue-gradient: linear-gradient(to right, #0056b3, #007bff);
+}
+
 /* Reset some default styles */
 body, h1, h2, ul, p {
     margin: 0;
@@ -8,7 +15,7 @@ body, h1, h2, ul, p {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-image: url('background.jpg'); /* Add the path to your background image */
+    background: var(--background-gradient);
     background-size: cover;
     padding: 20px;
     display: flex;
@@ -20,7 +27,7 @@ body {
 
 /* Dark Theme */
 .dark-theme {
-    background-color: #000;
+    background: var(--background-gradient);
     color: #fff;
 }
 
@@ -42,7 +49,7 @@ body {
     left: 0;
     right: 0;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: var(--nav-background-gradient)
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -76,7 +83,7 @@ body {
 
 /* Style the Home section */
 #home {
-    background-color: #000; /* Set background color for the Home section */
+    background: var(--background-gradient);
     padding: 20px;
     text-align: center;
     height: 100vh;
@@ -196,7 +203,7 @@ body {
 footer {
     padding: 20px 0;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--nav-background-gradient);
     color: #fff;
     transition: background-color 0.3s; /* Add transition for smooth color change */
 }
