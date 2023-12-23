@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Set minimum height to fill the viewport */
     overflow-x: hidden; /* Hide horizontal scrollbar if necessary */
+    color: #fff; /* Set default text color */
 }
 
 /* Dark Theme */
@@ -34,23 +35,31 @@ body {
 }
 
 /* Style the navigation bar */
+/* Style the navigation bar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background color for the navigation bar */
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
 /* Style the menu items */
 .menu {
     list-style: none;
     display: flex;
+    flex-direction: row; /* Ensure the items are in a row */
+    justify-content: flex-end; /* Move items to the right */
 }
 
 .menu li {
-    margin-right: 20px;
+    margin-left: 20px; /* Adjust margin for spacing */
 }
 
 .menu li a {
@@ -67,32 +76,36 @@ body {
 
 /* Style the Home section */
 #home {
+    background-color: #000; /* Set background color for the Home section */
     padding: 20px;
     text-align: center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #fff;
+    transition: background-color 0.3s; /* Add transition for smooth color change */
 }
 
 /* Style the Home section header (your name) */
 #home h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #fff; /* Set text color for the Home section */
 }
 
 /* Style the Home section subheading (your job title) */
 #home p {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #fff; /* Set text color for the Home section */
 }
 
 /* Style the Home section content */
 #home .content {
     font-size: 1.2rem;
     line-height: 1.6;
+    color: #fff; /* Set text color for the Home section */
 }
 
 /* Style the "Learn More" button in the Home section */
@@ -112,21 +125,26 @@ body {
     background-color: #0056b3;
 }
 
-/* ... (previous styles) */
+/* Style the content container */
+.content-container {
+    flex: 1;
+    padding-top: 80px;
+}
 
-/* Style the About, Projects, and Contact sections */
+/* Style the content container */
+.content-container {
+    flex: 1; /* Make the content container grow to fill available space */
+    padding-top: 80px; /* Adjust the padding based on the height of your fixed navigation bar */
+}
+
+/* Style the sections */
 .section {
     padding: 20px;
     text-align: center;
-    display: none; /* Initially hide all sections */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
+    flex: 1; /* Make each section grow to fill available space */
 }
 
-/* Style the section header (About, Projects, Contact) */
+/* Style the section header */
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -150,17 +168,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Style the Contact section content */
-#contact ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#contact ul li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
 /* Style the "Back to Top" button in all sections */
 .section .back-to-top {
     display: inline-block;
@@ -168,16 +175,15 @@ body {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
-    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .section .back-to-top:hover {
     background-color: #0056b3;
 }
-
 
 /* Add a container to push footer to the bottom */
 .container {
@@ -192,8 +198,5 @@ footer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    margin-top: auto; /* Push the footer to the bottom of the container */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
 }
-
-
-
