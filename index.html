@@ -5,116 +5,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiva Kumar Ponnuraj - Technical Leader Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="dark-theme"> <!-- Add dark-theme class to the body element -->
+<body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="menu">
-            <li><a href="#home" onclick="toggleSection('home')">Home</a></li>
-            <li><a href="#about" onclick="toggleSection('about')">About</a></li>
-            <li><a href="#projects" onclick="toggleSection('projects')">Projects</a></li>
-            <li><a href="#contact" onclick="toggleSection('contact')">Contact</a></li>
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">SK</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="menu" id="menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Content Container -->
-    <div class="content-container" id="content-container">
-        <!-- Home Section -->
-        <section class="section" id="home">
-            <header>
-                <h1>Shiva Kumar Ponnuraj</h1>
-                <p>Tech Leader | Software Architect | Innovator</p>
-            </header>
-            <div class="content">
-                <p>Welcome to my portfolio page. Explore my leadership journey and technical expertise.</p>
-                <a href="#about" class="cta-button" onclick="toggleSection('about')">Learn More about me...</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content fade-in">
+            <span class="hero-greeting">Hello, I'm</span>
+            <h1 class="hero-name">Shiva Kumar Ponnuraj</h1>
+            <div class="hero-titles">
+                <span class="typing-text" id="typing-text"></span><span class="cursor">|</span>
             </div>
-        </section>
+            <p class="hero-description">20+ years of expertise building scalable solutions across startups to Fortune 500 companies.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
 
-        <!-- About Section (initially hidden) -->
-        <section class="section" id="about" style="display: none;">
-            <h2>About Me</h2>
-            <p>Software Architect and Tech Leader with a strong product mindset, with 20+ years of expertise spanning diverse domains.
-               Proficient in design, mobile, cloud, and agile, consistently delivering scalable solutions for startups to Fortune 500 
-               companies, on time and within budget</p>
-        </section>
-
-        <!-- Projects Section (initially hidden) -->
-        <section class="section" id="projects" style="display: none;">
-            <h2>Projects</h2>
-            <div style="margin-top: 10px;">
-                <div style="margin-bottom: 20px;">
-                    <strong>Project 1:</strong><br>
-                    <p>
-                        <span>My portfolio site developed using html/css/js & hosted on AWS <span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://shiva-kumar.com">shiva-kumar.com</a>
-                    </p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Building with Purpose</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>Software Architect and Tech Leader with a strong product mindset, with <strong>20+ years of expertise</strong> spanning diverse domains. Proficient in design, mobile, cloud, and agile, consistently delivering scalable solutions for startups to Fortune 500 companies, on time and within budget.</p>
                 </div>
-                <div style="margin-bottom: 20px;">
-                    <strong>Project 2:</strong><br>
-                    <p>
-                        <span>A Serverless App for Image Recognition with AWS Rekognition & Lambda <span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://github.com/pshivakumar/cloud-aws-rekognize-image-serverless-app">Serverless App on GitHub</a>
-                    </p>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <strong>Project 3:</strong><br>
-                    <p>
-                        <span>Hike is a stunning SwiftUI-based iOS app to showcase SwiftUI, highlighting its capabilities in creating beautiful card views and an elegant settings screen <span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://github.com/pshivakumar/swiftui-hike-app">Mobile - SwiftUI App on GitHub </a>
-                    </p>
-
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <strong>Project 4:</strong><br>
-                    <p>
-                        <span>AvatarGenerator SDK for iOS is a versatile library that allows developers to easily integrate customizable avatar profile pictures into their iOS apps<span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://github.com/pshivakumar/iOS-sdk-avatargenerator">Mobile - Swift SDK/Package on GitHub </a>
-                    </p>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <strong>Project 5:</strong><br>
-                    <p>
-                        <span>A PhotoPicker app is a simple iOS app built using SwiftUI that allows users to pick a photo from their device's photo library <span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://github.com/pshivakumar/swiftui-photopicker">Mobile - iOS App on GitHub </a>
-                    </p>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <strong>Project 6:</strong><br>
-                    <p>
-                        <span>SOLID Principles in Swift <span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://github.com/pshivakumar/SOLIDPrinciplesInSwift">Coding examples on GitHub</a>
-                    </p>
-                </div>
-                <div>
-                    <strong>Project 7:</strong><br>
-                    <p>
-                        <span>A simple Go WebServer <span style="color: #CCCCCC;"> >>> </span></span>
-                        <a href="https://github.com/pshivakumar/SimpleGoWebServer">Sample WebServer on GitHub</a>
-                    </p>
+                <div class="skills-grid">
+                    <div class="skill-card fade-in">
+                        <i class="fa-solid fa-layer-group skill-icon" aria-hidden="true"></i>
+                        <h3>Architecture</h3>
+                        <p>Scalable system design &amp; microservices</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <i class="fa-brands fa-apple skill-icon" aria-hidden="true"></i>
+                        <h3>Mobile (iOS)</h3>
+                        <p>Swift, SwiftUI, iOS SDK</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <i class="fa-brands fa-aws skill-icon" aria-hidden="true"></i>
+                        <h3>Cloud (AWS)</h3>
+                        <p>Serverless, Lambda, Rekognition</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <i class="fa-solid fa-users-gear skill-icon" aria-hidden="true"></i>
+                        <h3>Leadership</h3>
+                        <p>Agile teams, strategy &amp; delivery</p>
+                    </div>
                 </div>
             </div>
-        </section>        
-       
-        <!-- Contact Section (initially hidden) -->
-        <section class="section" id="contact" style="display: none;">
-            <h2>Contact</h2>
-            <p>Feel free to get in touch with me:</p>
-            <ul style="list-style: none; padding: 10;">
-                <li>Email: <a href="mailto:shiva.kutti.kumar@gmail.com">shiva.kutti.kumar@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/shivakuttikumar">My LinkedIn Profile</a></li>
-            </ul>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+                    <h3>Portfolio Website</h3>
+                    <p>Personal portfolio site developed using HTML/CSS/JS and hosted on AWS.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">AWS</span>
+                    </div>
+                    <a href="https://shiva-kumar.com" target="_blank" rel="noopener noreferrer" class="project-link">View Site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+                    <h3>Serverless Image Recognition</h3>
+                    <p>Serverless app for image recognition using AWS Rekognition &amp; Lambda.</p>
+                    <div class="project-tags">
+                        <span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Serverless</span>
+                    </div>
+                    <a href="https://github.com/pshivakumar/cloud-aws-rekognize-image-serverless-app" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-brands fa-apple" aria-hidden="true"></i></div>
+                    <h3>Hike — SwiftUI App</h3>
+                    <p>A stunning SwiftUI-based iOS app showcasing beautiful card views and an elegant settings screen.</p>
+                    <div class="project-tags">
+                        <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">iOS</span>
+                    </div>
+                    <a href="https://github.com/pshivakumar/swiftui-hike-app" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-solid fa-person-circle-plus" aria-hidden="true"></i></div>
+                    <h3>AvatarGenerator iOS SDK</h3>
+                    <p>Versatile iOS library for integrating customizable avatar profile pictures into apps.</p>
+                    <div class="project-tags">
+                        <span class="tag">Swift</span><span class="tag">iOS SDK</span><span class="tag">SPM</span>
+                    </div>
+                    <a href="https://github.com/pshivakumar/iOS-sdk-avatargenerator" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-solid fa-image" aria-hidden="true"></i></div>
+                    <h3>PhotoPicker App</h3>
+                    <p>Simple SwiftUI iOS app that allows users to pick photos from their device's photo library.</p>
+                    <div class="project-tags">
+                        <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">iOS</span>
+                    </div>
+                    <a href="https://github.com/pshivakumar/swiftui-photopicker" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+                    <h3>SOLID Principles in Swift</h3>
+                    <p>Coding examples demonstrating SOLID design principles applied in Swift development.</p>
+                    <div class="project-tags">
+                        <span class="tag">Swift</span><span class="tag">Design Patterns</span>
+                    </div>
+                    <a href="https://github.com/pshivakumar/SOLIDPrinciplesInSwift" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-icon"><i class="fa-brands fa-golang" aria-hidden="true"></i></div>
+                    <h3>Simple Go WebServer</h3>
+                    <p>A lightweight Go-based web server demonstrating backend development with Go.</p>
+                    <div class="project-tags">
+                        <span class="tag">Go</span><span class="tag">Backend</span>
+                    </div>
+                    <a href="https://github.com/pshivakumar/SimpleGoWebServer" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+            <p class="contact-subtitle fade-in">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+            <div class="contact-cards fade-in">
+                <a href="mailto:shiva.kutti.kumar@gmail.com" class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>shiva.kutti.kumar@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/shivakuttikumar" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p>shivakuttikumar</p>
+                    </div>
+                </a>
+                <a href="https://github.com/pshivakumar" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>pshivakumar</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Shiva Kumar Ponnuraj</p>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Shiva Kumar Ponnuraj</p>
+                <p class="footer-copy">&copy; 2024 &middot; Built with passion</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
