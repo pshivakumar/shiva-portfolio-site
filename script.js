@@ -53,8 +53,6 @@ updateActiveNavLink();
 const titles = [
     'Tech Leader',
     'Software Architect',
-    'Mobile Developer',
-    'Cloud Engineer',
     'Innovator'
 ];
 
